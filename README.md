@@ -47,4 +47,12 @@ Modulariza todo el proyecto como en `PYTHON`
 # COMANDOS DE CONSOLA
 `ng new NAME`.- Crea el proyecto de ANGULAR
 `ng serve -o`.- Tras pilar el codigo a JS, monta un servidor mediante WEBPACK y lo habre en cuanto termina
-`ng g c heroes/listado`.- Crea un nuevo componente
+`ng g c heroes/listado`.- Crea un nuevo componente (evitat pruebas: --skip-tests)
+`ng g m NOMBRE`.- Crea un nuevo modulo
+
+# -------------------------NOTAS DE COMPONENTS.HTML-----------------------------------------------------------------------
+`[]`.- Establecer (emitir) algun valor a una propiedad de HTML
+`()`.- Escuchar eventos de los Modules.ts
+`.trim()`.- Elimina espacios en blanco en JS
+# Formularios
+`[(ngModel)]="nuevo.nombre"` Emite(escribe) y escucha(obtiene) el valor de la propiedad, y la almacena en la pripiedad con el mismo nombre 
