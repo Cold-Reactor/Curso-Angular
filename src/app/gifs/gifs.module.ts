@@ -17,7 +17,8 @@ import { ResultadosComponent } from './resultados/resultados.component';
   ],
   exports:[
     BusquedaComponent,
-    GifsPageComponent
+    GifsPageComponent,
+    ResultadosComponent
   ]
 })
 export class GifsModule { }
