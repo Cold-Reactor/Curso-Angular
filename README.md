@@ -47,10 +47,10 @@ Modulariza todo el proyecto como en `PYTHON`
 # COMANDOS DE CONSOLA
 `ng new NAME`.- Crea el proyecto de ANGULAR
 `ng serve -o`.- Tras pilar el codigo a JS, monta un servidor mediante WEBPACK y lo habre en cuanto termina
-`ng g c heroes/listado`.- Crea un nuevo componente (evitat pruebas: --skip-tests)
+`ng g c heroes/listado`.- Crea un nuevo componente (evitat pruebas y estilos: --skip-tests -s)
 `ng g m NOMBRE`.- Crea un nuevo modulo
 `debugger`.- Es como un Breakpoint en el JS al momento de su ejecucion
-
+`ng build --configuration=production` .- Poner en produccion el proyecto
 # -------------------------NOTAS DE COMPONENTS.HTML-----------------------------------------------------------------------
 `[]`.- Establecer (emitir) algun valor de JS a una propiedad de HTML
 `()`.- Escuchar eventos de los Modules.ts

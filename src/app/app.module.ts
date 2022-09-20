@@ -4,21 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-
-import { HeroesModule } from './Heroes/heroes.module';
-import { ContadorModule } from './Contador/contador.module';
-import { DbzModule } from './Dbz/dbz.module';
-
+import { ShareModule } from './share/share.module';
+import { GifsModule } from './gifs/gifs.module';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
     ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeroesModule,
-    ContadorModule,
-    DbzModule
+    ShareModule,
+    GifsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
