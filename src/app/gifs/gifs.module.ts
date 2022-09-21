@@ -5,7 +5,6 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { ResultadosComponent } from './resultados/resultados.component';
 
 
-
 @NgModule({
   declarations: [
     GifsPageComponent,
@@ -13,7 +12,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
     ResultadosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports:[
     BusquedaComponent,

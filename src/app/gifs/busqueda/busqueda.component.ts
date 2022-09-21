@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { find } from 'rxjs';
+import { GifsService } from '../services/gifs.service';
 
 @Component({
   selector: 'app-busqueda',
@@ -7,12 +9,20 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class BusquedaComponent {
 
+  constructor(private gifService: GifsService) {
+    
+  }
+
   //TODO: De esta manera se puede manipular los elementos HTML
   @ViewChild('txtBuscar') txtBuscar!:ElementRef<HTMLInputElement>
 
   buscar(){
-    console.log(this.txtBuscar.nativeElement.value)
+    const valor = this.txtBuscar.nativeElement.value
+
+    this.gifService.buscarGifs(valor)
+
     this.txtBuscar.nativeElement.value=""
+    
 
   }
 }
