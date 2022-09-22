@@ -7,9 +7,5 @@ import { Component} from '@angular/core';
   ]
 })
 export class PorRegionComponent{
-  termino: string = '';
-  
-  buscar(){
-    console.log(this.termino);
-  }
+
 }

@@ -18,7 +18,6 @@ import { PaisModule } from './pais/pais.module';
     AppRoutingModule,
     ShareModule,
     PaisModule,
-    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
