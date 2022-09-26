@@ -18,6 +18,16 @@ export class PaisService {
     // TODO: "OF" es una funcion que gera obserbables, aqui se esta utilizando encaso de que la peticion htt reciba un error retorna un []
     // return this.httpClient.get(url).pipe(catchError((err) => of([])));
     return this.httpClient.get<PorPais[]>(url);
+  }
+  buscarCapital(termino: string): Observable<PorPais[]> {
+    const url = `${this.apiUrl}/capital/${termino}`;
 
+    return this.httpClient.get<PorPais[]>(url);
+  }
+
+  verPais(id: string): Observable<PorPais[]> {
+    const url = `${this.apiUrl}/alpha/${id}`;
+
+    return this.httpClient.get<PorPais[]>(url);
   }
 }

@@ -1,41 +1,17 @@
 <div class="row">
     <div class="col">
-      <form (ngSubmit)="buscar()">
-        <input
-          type="text"
-          name="termino"
-          class="form-control"
-          placeholder="Buscar pais..."
-          [(ngModel)]='termino'
-          />
-      </form>
+      <app-pais-input 
+        (onEnter)="buscar($event)"
+        (onDebounce)="sugerencias($event)"
+        placeholder="Buscar Pais..." >
+      </app-pais-input>
     </div>
   </div>
   <hr />
   <div *ngIf="error" class="alert alert-danger">No se encontro nada con el nombre {{termino}}</div>
   <div class="row">
     <div class="col">
-      <table *ngIf="!error" class="table table-hover">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Bandera</th>
-            <th>Nombre</th>
-            <th>Poblacion</th>
-            <th>More info</th>
-          </tr>
-        </thead>
-        <!-- {{p.coatOfArms.png}} -->
-        <tbody>
-          <tr *ngFor="let p of paises;let i = index">
-              <td>{{i+1}}</td>
-              <td><img style="width: 50px;" [src]="p.flags.png" alt=""></td>
-              <td>{{p.name.official}}</td>
-              <td>{{p.population | number}}</td>
-              <td><a [routerLink]="['/pais',p.cca2]" routerLinkActive="router-link-active" >click aqui</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <app-pais-tabla [paises]="paises" ></app-pais-tabla>
     </div>
   </div>
   
