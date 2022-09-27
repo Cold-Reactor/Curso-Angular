@@ -9,6 +9,8 @@ import { PorPais } from '../interfaces/pais.interface';
 })
 export class PaisService {
   private apiUrl: string = 'https://restcountries.com/v3.1';
+  private apiUrl2: string = 'https://restcountries.com/v2';
+
 
   constructor(private httpClient: HttpClient) {}
 
@@ -27,6 +29,12 @@ export class PaisService {
 
   verPais(id: string): Observable<PorPais[]> {
     const url = `${this.apiUrl}/alpha/${id}`;
+
+    return this.httpClient.get<PorPais[]>(url);
+  }
+
+  regional(id: string): Observable<PorPais[]> {
+    const url = `${this.apiUrl2}/regionalbloc/${id}`;
 
     return this.httpClient.get<PorPais[]>(url);
   }
