@@ -2,6 +2,7 @@
 
 export interface PorPais {
     name:         Name;
+    alpha2Code:   string;
     tld:          string[];
     cca2:         string;
     ccn3:         string;

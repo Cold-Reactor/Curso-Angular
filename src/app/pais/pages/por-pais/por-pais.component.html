@@ -6,9 +6,17 @@
         placeholder="Buscar Pais..." >
       </app-pais-input>
     </div>
-  </div>
-  <hr />
-  <div *ngIf="error" class="alert alert-danger">No se encontro nada con el nombre {{termino}}</div>
+</div>
+
+<app-sugerencias
+  *ngIf="mostrarSugerencias"
+  [termino]="termino"
+  [paisesSugeridos]="paisesSugeridos"
+  (ter)="buscar($event)" 
+  >
+</app-sugerencias>
+<hr />
+<div *ngIf="error" class="alert alert-danger">No se encontro nada con el nombre {{termino}}</div>
   <div class="row">
     <div class="col">
       <app-pais-tabla [paises]="paises" ></app-pais-tabla>

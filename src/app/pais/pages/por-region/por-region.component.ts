@@ -16,24 +16,13 @@ export class PorRegionComponent{
   paises: PorPais[] = []
 
 
-  // constructor(private service: PaisService) {}
-
-  // buscar(termino: string) {
-  //   this.termino = termino;
-
-  //   this.service.buscarCapital(termino)
-  //   .subscribe(resp => {
-  //     this.error = false
-  //     this.capitales = resp
-  //     console.log(resp,"dasdasdasda");
-      
-  //   }, (err) =>{
-  //     this.error = true
-  //     this.capitales = []
-  //   });
-  // }
+  constructor(private service: PaisService) {}
 
   activarRegion(region: string) {
+    //TODO: Si la region es giaul a la region que sta activa, no mandes a llamar el endpoint
+    if(region === this.regionActiva ){return}
     this.regionActiva = region;
+
+    this.service.regional(region).subscribe(paises => this.paises = paises)
   }
 }

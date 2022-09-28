@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
+import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PaisInputComponent } from './components/pais-input/pais-input.component
     VerPaisComponent,
     PaisTablaComponent,
     PaisInputComponent,
+    SugerenciasComponent,
   ],
   exports: [
     PorCapitalComponent,
