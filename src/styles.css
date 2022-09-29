@@ -1,14 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 200;
-}
-
 html, body {
-    height: 100%;
+    margin: 10px;
+    font-family: var(--font-family) ;
+    background-color: var( --surface-a );
 }
-#sidebar{
-    height: 100%;
-    min-height: 100vh;
-    min-width: 100px;
+.text-layout{
+    color: var(--text-color);
 }
