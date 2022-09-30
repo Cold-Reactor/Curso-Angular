@@ -1,1 +1,76 @@
-<p>basicos works!</p>
+<div class="text-layout">
+  <h1>Pipes Basicos</h1>
+  <p>Pipes incluidos en Angular</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="uppercase" [subheader]="nombreLower">
+      {{ nombreLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="lowercase" [subheader]="nombreUper">
+        {{ nombreUper | lowercase }}
+      </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="tittlecase" [subheader]="nombreCompleto">
+        {{ nombreCompleto | titlecase }}
+      </p-card>
+  </div>
+  <div class="col-4">1</div>
+</div>
+
+<div class="text-layout">
+    <h1>date | fecha | pipe</h1>
+    <p>Pipes mostrar la fecha</p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>fecha -------------------------------------------------------------------------------------------------></li>
+                <li>fecha | date -------------------------------------------------------------------------------------------></li>
+                <li>fecha | date:'short' -----------------------------------------------------------------------------------></li>
+                <li>fecha | date:'medium' --------------------------------------------------------------------------------></li>
+                <li>fecha | date:'long' ------------------------------------------------------------------------------------></li>
+                <li>fecha | date:'full' -------------------------------------------------------------------------------------></li>
+                <li>fecha | date:'shortDate' ------------------------------------------------------------------------------></li>
+                <li>fecha | date:'mediumDate'---------------------------------------------------------------------------></li>
+                <li>fecha | date:'longDate ' ------------------------------------------------------------------------------></li>
+                <li>fecha | date:'fullDate' --------------------------------------------------------------------------------></li>
+                <li>fecha | date:'shortTime' ------------------------------------------------------------------------------></li>
+                <li>fecha | date:'mediumTime' --------------------------------------------------------------------------></li>
+                <li>fecha | date:'longTime' -------------------------------------------------------------------------------></li>
+                <li>fecha | date:'fullTime' --------------------------------------------------------------------------------></li>
+                <li>fecha | date:'MM/d/y' --------------------------------------------------------------------------------></li>
+                <li>fecha | date:'MMMM/d/y':" ":'en-US' ---------------------------------------------------------------></li>
+
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'short'}}</li>
+                <li>{{fecha | date:'medium'}}</li>
+                <li>{{fecha | date:'long'}}</li>
+                <li>{{fecha | date:'full'}}</li>
+                <li>{{fecha | date:'shortDate'}}</li>
+                <li>{{fecha | date:'mediumDate'}}</li>
+                <li>{{fecha | date:'longDate'}}</li>
+                <li>{{fecha | date:'fullDate'}}</li>
+                <li>{{fecha | date:'shorTime'}}</li>
+                <li>{{fecha | date:'mediumTime'}}</li>
+                <li>{{fecha | date:'longDate'}}</li>
+                <li>{{fecha | date:'fullDate'}}</li>
+                <li>{{fecha | date:'MM/d/y'}}</li>
+                <li>{{fecha | date:'MMMM/d/y':" ":'en-US' }}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
