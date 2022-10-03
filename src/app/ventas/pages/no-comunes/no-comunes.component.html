@@ -4,9 +4,69 @@
 </div>
 
 <div class="grid">
-  <div style="color: white ;" class="col p-md-6 p-sm-9">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur iusto
-    asperiores consequuntur non modi architecto enim labore harum voluptate hic.
-    Temporibus rerum odit, velit beatae tempora veniam ratione quisquam aperiam!
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      <p>
+        Saludos {{ nombre }},es un placer
+        {{ genero | i18nSelect: invitacionMap }}
+      </p>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Cambiar Persona"
+        class="p-button-raised p-button-Primary"
+        (click)="cambiarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>{{ clientes.length | i18nPlural: clientesMap }}</p>
+      <button
+        pButton
+        pRipple
+        type="button"
+        label="Borrar Clientes"
+        class="p-button-raised p-button-Primary"
+        (click)="borrarCliente()"
+      ></button>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ clientes }}</pre>
+      <b>slice:0:2</b>
+      <pre>{{ clientes | slice: 0:3 }}</pre>
+      <b>Sting(slice:0:4)</b>
+      <pre>{{ "Felicidad" | slice: 0:4 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of persona | keyvalue">
+          <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre>{{ heroes | json }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="col-12 md:col-6 lg:col-6">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre> {{myObesvable | async}}</pre>
+      <pre *ngIf="!(valorPromesa | async)">Resolviendo Promesa</pre>
+      <pre> {{valorPromesa | async}}</pre>
+    </p-fieldset>
   </div>
 </div>
